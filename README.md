@@ -7,11 +7,15 @@ This repository contains the full production codebase for **[CASPRO LLC](https:/
 
 ## 📁 Repository Structure
 ```
-├── index.html             # Homepage with Hero, Marquee, Service Matrix & Live ROI Calculator
-├── services.html          # Comprehensive 9-Practice In-Depth Capabilities Catalog
-├── about.html             # Philosophy, Values & Global Delivery Model
+├── index.html             # First Page: "About Us" with "Why Choose Us", Framework, Values & Stats
+├── services.html          # Second Page: "Services" (9-Practice Catalog & Case Highlights)
+├── roi-calculator.html    # Third Page: "ROI Calculator" (Interactive Scope & Cost Estimator)
+├── contact.html           # Fourth Page: "Contact Us" (RFP Submission Form & Direct Contacts)
+├── about.html             # About Us (Synchronized alias)
+├── calculator.html        # ROI Calculator (Redirect alias)
 ├── case-studies.html      # Enterprise Success Stories & Quantified Metrics
-├── contact.html           # RFP Submission Form, Contact Info & Accordion FAQs
+├── sitemap.xml            # Search Engine XML Sitemap
+├── robots.txt             # Search Engine Crawler Directives
 ├── css/
 │   └── style.css          # Master Responsive Design System & Dark/Light Themes
 ├── js/
