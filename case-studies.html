@@ -3,9 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Studies &amp; Client Success | CASPRO LLC</title>
-  <meta name="description" content="Discover how CASPRO helped enterprise clients achieve 99.99% uptime, reduce cloud TCO by 45%, and remediate 1,400+ SAP GRC conflicts.">
-  
+  <title>Enterprise Engineering Case Studies &amp; Client Results | CASPRO LLC</title>
+  <meta name="description" content="Discover how CASPRO helped enterprise clients achieve 99.99% uptime, reduce cloud TCO by 48%, and remediate 1,400+ SAP GRC access conflicts.">
+  <meta name="keywords" content="CASPRO case studies, SAP GRC case study, AWS Kubernetes case study, fintech cloud migration, IT consulting results">
+  <meta name="author" content="Consulting and Services Pro LLC">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.casprollc.com/case-studies.html">
+  <meta name="theme-color" content="#070a11">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://www.casprollc.com/case-studies.html">
+  <meta property="og:site_name" content="CASPRO LLC">
+  <meta property="og:title" content="Enterprise Engineering Case Studies | CASPRO LLC">
+  <meta property="og:description" content="Proven client results in SAP GRC remediation, Kubernetes microservices, and enterprise digital modernization.">
+  <meta property="og:image" content="https://www.casprollc.com/assets/images/hero-tech.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enterprise Engineering Case Studies | CASPRO LLC">
+  <meta name="twitter:description" content="Proven client results in SAP GRC remediation, Kubernetes microservices, and enterprise digital modernization.">
+  <meta name="twitter:image" content="https://www.casprollc.com/assets/images/hero-tech.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.casprollc.com/case-studies.html#webpage",
+        "url": "https://www.casprollc.com/case-studies.html",
+        "name": "Enterprise Case Studies | CASPRO LLC",
+        "description": "Enterprise case studies detailing SAP GRC SoD remediation and FinTech cloud modernization.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://www.casprollc.com/#website",
+          "url": "https://www.casprollc.com/",
+          "name": "CASPRO LLC"
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +75,11 @@
       </a>
 
       <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">About Us</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="case-studies.html" class="nav-link active">Case Studies</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="roi-calculator.html" class="nav-link">ROI Calculator</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
         </ul>
       </nav>
 
@@ -54,7 +97,7 @@
 
   <main>
     <!-- HERO -->
-    <section class="section" style="padding-top: calc(var(--header-height) + 28px); padding-bottom: 30px;">
+    <section class="section" style="padding-top: calc(var(--header-height) + 32px); padding-bottom: 30px;">
       <div class="container text-center" style="max-width: 780px; margin: 0 auto;">
         <div class="badge-pill">Proven Track Record</div>
         <h1 style="margin-bottom: 14px;">
@@ -66,13 +109,13 @@
       </div>
     </section>
 
-    <!-- CASE STUDIES LIST (COMPACT BENTO FORMAT) -->
+    <!-- CASE STUDIES LIST -->
     <section class="section" style="padding-top: 0; padding-bottom: 40px;">
       <div class="container">
         
         <!-- Case Study 1 -->
         <article class="glass-card" style="margin-bottom: 24px; padding: 28px;">
-          <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px;">
+          <div class="case-detail-grid">
             <div>
               <div class="badge-pill" style="margin-bottom: 10px;">Enterprise SAP &amp; Security</div>
               <h2 style="font-size: 1.45rem; margin-bottom: 12px;">Global Logistics Enterprise: SAP GRC Access Control &amp; SoD Overhaul</h2>
@@ -113,7 +156,7 @@
 
         <!-- Case Study 2 -->
         <article class="glass-card" style="margin-bottom: 24px; padding: 28px;">
-          <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px;">
+          <div class="case-detail-grid">
             <div>
               <div class="badge-pill" style="margin-bottom: 10px;">Cloud &amp; DevOps Modernization</div>
               <h2 style="font-size: 1.45rem; margin-bottom: 12px;">FinTech Banking SaaS: High-Availability AWS Kubernetes Migration</h2>
@@ -165,7 +208,11 @@
           <p style="max-width: 580px; margin: 0 auto 22px auto; color: var(--text-secondary); font-size: 0.95rem;">
             Schedule a confidential discovery meeting to analyze your technical bottlenecks and build a high-ROI delivery plan.
           </p>
-          <button class="btn btn-primary btn-sm open-discovery-modal">Book Discovery Call</button>
+          <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+            <a href="roi-calculator.html" class="btn btn-primary btn-sm">Calculate Project ROI</a>
+            <button class="btn btn-secondary btn-sm open-discovery-modal">Book Discovery Call</button>
+            <a href="contact.html" class="btn btn-secondary btn-sm">Contact Us</a>
+          </div>
         </div>
       </div>
     </section>
@@ -200,20 +247,23 @@
         </div>
 
         <div>
-          <h4 class="footer-heading">Company</h4>
+          <h4 class="footer-heading">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About CASPRO</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="roi-calculator.html">ROI Calculator</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Enterprise Inquiries</h4>
+          <h4 class="footer-heading">Direct Contact</h4>
           <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">
-            📧 <a href="mailto:contacto@consultingsp.us" style="color: var(--accent-cyan); text-decoration: none;">contacto@consultingsp.us</a><br>
-            📞 Phone: (407) 312-0515<br>
-            📍 Winter Garden, Florida, USA
+            📧 Inquiries: <a href="mailto:contacto@consultingsp.us" style="color: var(--accent-cyan); text-decoration: none;">contacto@consultingsp.us</a><br>
+            📞 Phone: <span style="color: var(--text-primary);">(407) 312-0515</span><br>
+            📍 Location: Winter Garden, Florida, USA<br>
+            ⏱️ Response SLA: &lt; 2 Hours
           </div>
         </div>
       </div>

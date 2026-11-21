@@ -168,6 +168,7 @@ function initServiceTabs() {
 function initProjectEstimator() {
   const serviceBtns = document.querySelectorAll('.calc-service-btn');
   const tierBtns = document.querySelectorAll('.calc-tier-btn');
+  const velocityBtns = document.querySelectorAll('.calc-velocity-btn');
   const durationSlider = document.getElementById('calcDurationSlider');
   const durationDisplay = document.getElementById('calcDurationVal');
 
@@ -175,11 +176,13 @@ function initProjectEstimator() {
   const estTeamVal = document.getElementById('estTeamVal');
   const estSavingsVal = document.getElementById('estSavingsVal');
   const estCostVal = document.getElementById('estCostVal');
+  const estRoiVal = document.getElementById('estRoiVal');
 
   if (!durationSlider) return;
 
   let selectedServiceMultiplier = 1.2;
   let selectedTierMultiplier = 1.0;
+  let selectedVelocityMultiplier = 1.0;
   let months = 3;
 
   serviceBtns.forEach(btn => {
@@ -200,22 +203,36 @@ function initProjectEstimator() {
     });
   });
 
+  if (velocityBtns.length) {
+    velocityBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        velocityBtns.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedVelocityMultiplier = parseFloat(btn.getAttribute('data-velocity') || '1.0');
+        recalculate();
+      });
+    });
+  }
+
   durationSlider.addEventListener('input', (e) => {
     months = parseInt(e.target.value, 10);
-    if (durationDisplay) durationDisplay.innerText = `${months} Months`;
+    if (durationDisplay) durationDisplay.innerText = `${months} Month${months > 1 ? 's' : ''}`;
     recalculate();
   });
 
   function recalculate() {
-    const baseWeeks = Math.max(4, Math.round(months * 4.2 * selectedTierMultiplier));
-    const teamSize = Math.max(3, Math.round(3 * selectedTierMultiplier + (selectedServiceMultiplier > 1.3 ? 2 : 1)));
-    const estimatedSavings = Math.round(35 + (selectedTierMultiplier * 8) + (months > 4 ? 6 : 2));
+    const rawWeeks = Math.round((months * 4.2 * selectedTierMultiplier) / selectedVelocityMultiplier);
+    const baseWeeks = Math.max(3, rawWeeks);
+    const teamSize = Math.max(3, Math.round(3 * selectedTierMultiplier + (selectedServiceMultiplier > 1.3 ? 2 : 1) + (selectedVelocityMultiplier > 1.1 ? 2 : 0)));
+    const estimatedSavings = Math.round(38 + (selectedTierMultiplier * 6) + (months > 4 ? 6 : 2));
     const estimatedCostRange = `$${Math.round(15 * months * selectedTierMultiplier * selectedServiceMultiplier)}k - $${Math.round(28 * months * selectedTierMultiplier * selectedServiceMultiplier)}k`;
+    const roiMultiplier = (2.4 + (selectedTierMultiplier * 0.4) + (months * 0.15)).toFixed(1);
 
     if (estTimeVal) estTimeVal.innerText = `${baseWeeks} Weeks (${months} mo)`;
     if (estTeamVal) estTeamVal.innerText = `${teamSize} Senior Engineers`;
     if (estSavingsVal) estSavingsVal.innerText = `~${estimatedSavings}% vs In-House`;
     if (estCostVal) estCostVal.innerText = estimatedCostRange;
+    if (estRoiVal) estRoiVal.innerText = `${roiMultiplier}x Estimated ROI`;
   }
 
   recalculate();

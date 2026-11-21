@@ -3,9 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact &amp; Discovery Consultation | CASPRO LLC</title>
-  <meta name="description" content="Connect with Consulting and Services Pro LLC (CASPRO). Request an enterprise proposal, schedule a 30-minute discovery call, or submit an RFP.">
-  
+  <title>Contact Us &amp; Discovery Consultation | CASPRO LLC</title>
+  <meta name="description" content="Connect with Consulting and Services Pro LLC (CASPRO). Request an enterprise proposal, schedule a 30-minute discovery call, or submit an RFP. Guaranteed &lt;2 hour SLA response.">
+  <meta name="keywords" content="contact CASPRO, IT consulting contact, software development proposal, SAP GRC consultation, hire engineering squad, RFP submission">
+  <meta name="author" content="Consulting and Services Pro LLC">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.casprollc.com/contact.html">
+  <meta name="theme-color" content="#070a11">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://www.casprollc.com/contact.html">
+  <meta property="og:site_name" content="CASPRO LLC">
+  <meta property="og:title" content="Contact Us &amp; Discovery Consultation | CASPRO LLC">
+  <meta property="og:description" content="Schedule a 30-minute discovery call or submit an enterprise RFP. Our senior solutions architects respond within 2 hours.">
+  <meta property="og:image" content="https://www.casprollc.com/assets/images/hero-tech.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us &amp; Discovery Consultation | CASPRO LLC">
+  <meta name="twitter:description" content="Schedule a 30-minute discovery call or submit an enterprise RFP. Our senior solutions architects respond within 2 hours.">
+  <meta name="twitter:image" content="https://www.casprollc.com/assets/images/hero-tech.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://www.casprollc.com/contact.html#webpage",
+        "url": "https://www.casprollc.com/contact.html",
+        "name": "Contact Us | CASPRO LLC",
+        "description": "Direct communication channels for enterprise IT consulting, software engineering proposals, and SAP GRC audits.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://www.casprollc.com/#website",
+          "url": "https://www.casprollc.com/",
+          "name": "CASPRO LLC"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.casprollc.com/#organization",
+        "name": "Consulting and Services Pro LLC",
+        "alternateName": "CASPRO",
+        "url": "https://www.casprollc.com/",
+        "logo": "https://www.casprollc.com/assets/images/hero-tech.jpg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-407-312-0515",
+          "contactType": "customer service",
+          "email": "contacto@consultingsp.us",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["English", "Spanish"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Winter Garden",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +97,11 @@
       </a>
 
       <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">About Us</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="roi-calculator.html" class="nav-link">ROI Calculator</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
         </ul>
       </nav>
 
@@ -54,8 +119,8 @@
 
   <main>
     <!-- HERO -->
-    <section class="section" style="padding-top: calc(var(--header-height) + 28px); padding-bottom: 24px;">
-      <div class="container text-center" style="max-width: 780px; margin: 0 auto;">
+    <section class="section" style="padding-top: calc(var(--header-height) + 32px); padding-bottom: 24px;">
+      <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
         <div class="badge-pill">Let's Connect</div>
         <h1 style="margin-bottom: 14px;">
           Start Your <span class="text-gradient">Engineering Discovery</span>
@@ -66,7 +131,7 @@
       </div>
     </section>
 
-    <!-- CONTACT FORM & DETAILS GRID (COMPACT) -->
+    <!-- CONTACT FORM & DETAILS GRID -->
     <section class="section" style="padding-top: 0; padding-bottom: 40px;">
       <div class="container">
         <div class="contact-layout-grid">
@@ -137,7 +202,7 @@
             <h2 style="font-size: 1.45rem; margin-bottom: 18px;">Send Us Your Project Scope</h2>
 
             <form id="contactForm">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div class="form-row-grid">
                 <div class="form-group">
                   <label class="form-label">First Name *</label>
                   <input type="text" class="form-control" placeholder="John" required>
@@ -148,7 +213,7 @@
                 </div>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div class="form-row-grid">
                 <div class="form-group">
                   <label class="form-label">Corporate Email *</label>
                   <input type="email" class="form-control" placeholder="john@enterprise.com" required>
@@ -274,6 +339,10 @@
           <p>
             Consulting and Services Pro LLC is a premier enterprise IT consulting and digital engineering firm delivering custom software, SAP GRC, cloud automation, and AI solutions worldwide.
           </p>
+          <div style="margin-top: 14px; display: flex; gap: 8px;">
+            <span class="tech-tag" style="border: 1px solid var(--border-glass);">ISO 27001 Certified</span>
+            <span class="tech-tag" style="border: 1px solid var(--border-glass);">SOC 2 Compliant</span>
+          </div>
         </div>
 
         <div>
@@ -288,10 +357,12 @@
         </div>
 
         <div>
-          <h4 class="footer-heading">Company</h4>
+          <h4 class="footer-heading">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About CASPRO</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="roi-calculator.html">ROI Calculator</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -299,9 +370,10 @@
         <div>
           <h4 class="footer-heading">Direct Contact</h4>
           <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">
-            📧 <a href="mailto:contacto@consultingsp.us" style="color: var(--accent-cyan); text-decoration: none;">contacto@consultingsp.us</a><br>
-            📞 Phone: (407) 312-0515<br>
-            📍 Winter Garden, Florida, USA
+            📧 Inquiries: <a href="mailto:contacto@consultingsp.us" style="color: var(--accent-cyan); text-decoration: none;">contacto@consultingsp.us</a><br>
+            📞 Phone: <span style="color: var(--text-primary);">(407) 312-0515</span><br>
+            📍 Location: Winter Garden, Florida, USA<br>
+            ⏱️ Response SLA: &lt; 2 Hours
           </div>
         </div>
       </div>
@@ -310,9 +382,56 @@
         <div class="footer-bottom-text">
           &copy; 2026 Consulting and Services Pro LLC (CASPRO). All rights reserved.
         </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security Statement</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- DISCOVERY SESSION MODAL -->
+  <div class="modal-overlay" id="discoveryModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeDiscoveryModal" aria-label="Close Modal">&times;</button>
+      <div class="badge-pill" style="margin-bottom: 10px;">30-Minute Architecture Discovery</div>
+      <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Schedule Your Enterprise Consultation</h3>
+      <p style="font-size: 0.88rem; margin-bottom: 18px;">
+        Meet with a senior CASPRO solutions architect to discuss technical roadmaps, SAP GRC audits, cloud migration, or custom software specifications.
+      </p>
+
+      <form id="modalContactForm">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Work Email *</label>
+          <input type="email" class="form-control" placeholder="sarah@company.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Primary Area of Interest</label>
+          <select class="form-control">
+            <option>Custom Software Development</option>
+            <option>SAP Security &amp; GRC Compliance</option>
+            <option>Cloud Migration &amp; DevOps</option>
+            <option>Enterprise AI &amp; Data Engineering</option>
+            <option>Technical SEO &amp; Organic Growth</option>
+            <option>IT Strategy Consulting &amp; Modernization</option>
+            <option>Dedicated Engineering Squad</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Brief Project Summary or Questions</label>
+          <textarea class="form-control" rows="3" placeholder="Tell us about your current challenges, timeline, or objectives..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm" style="width: 100%; padding: 11px;">
+          Confirm Discovery Call Request
+        </button>
+      </form>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
