@@ -288,7 +288,7 @@ function initContactForms() {
         submitBtn.innerText = originalText;
         submitBtn.disabled = false;
         contactForm.reset();
-        showToast('Inquiry received! Our Solutions Architect will reach out in <2 hours.', 'success');
+        showToast('Inquiry received! Our Solutions Architect will reach out in less than 24 hours.', 'success');
       }, 1200);
     });
   }
