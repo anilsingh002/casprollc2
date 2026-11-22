@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Project Scope &amp; ROI Calculator | CASPRO LLC</title>
-  <meta name="description" content="Calculate your enterprise engineering project scope, squad composition, delivery timeline, and estimated ~42% cost savings vs. US in-house hiring with CASPRO's interactive ROI Calculator.">
-  <meta name="keywords" content="CASPRO, ROI calculator, project scope estimator, software development cost calculator, cloud migration ROI, SAP GRC pricing, IT staff augmentation calculator">
+  <title>ROI Calculator | CASPRO Consulting</title>
+  <meta name="description"
+    content="Calculate your enterprise engineering project scope, squad composition, delivery timeline, and estimated ~42% cost savings vs. US in-house hiring with CASPRO's interactive ROI Calculator.">
+  <meta name="keywords"
+    content="CASPRO, ROI calculator, project scope estimator, software development cost calculator, cloud migration ROI, SAP GRC pricing, IT staff augmentation calculator">
   <meta name="author" content="Consulting and Services Pro LLC">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.casprollc.com/roi-calculator.html">
@@ -16,16 +19,18 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://www.casprollc.com/roi-calculator.html">
   <meta property="og:site_name" content="CASPRO LLC">
-  <meta property="og:title" content="Interactive Project Scope &amp; ROI Calculator | CASPRO LLC">
-  <meta property="og:description" content="Model your enterprise project requirements in real-time. Forecast delivery timelines, dedicated squad size, and cost savings vs. in-house hiring.">
+  <meta property="og:title" content="ROI Calculator | CASPRO Consulting">
+  <meta property="og:description"
+    content="Model your enterprise project requirements in real-time. Forecast delivery timelines, dedicated squad size, and cost savings vs. in-house hiring.">
   <meta property="og:image" content="https://www.casprollc.com/assets/images/hero-tech.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Interactive Project Scope &amp; ROI Calculator | CASPRO LLC">
-  <meta name="twitter:description" content="Model your enterprise project requirements in real-time. Forecast delivery timelines, dedicated squad size, and cost savings vs. in-house hiring.">
+  <meta name="twitter:title" content="ROI Calculator | CASPRO Consulting">
+  <meta name="twitter:description"
+    content="Model your enterprise project requirements in real-time. Forecast delivery timelines, dedicated squad size, and cost savings vs. in-house hiring.">
   <meta name="twitter:image" content="https://www.casprollc.com/assets/images/hero-tech.jpg">
 
   <!-- Schema.org JSON-LD Structured Data -->
@@ -57,10 +62,14 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <!-- Ambient Background -->
@@ -92,11 +101,6 @@
       </nav>
 
       <div class="nav-actions">
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
-          <span id="themeIcon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          </span>
-        </button>
         <button class="btn btn-primary btn-sm open-discovery-modal" id="navCtaBtn">Schedule Discovery</button>
         <button class="mobile-menu-toggle" aria-label="Open Navigation Menu">&#9776;</button>
       </div>
@@ -112,7 +116,8 @@
           Interactive Project Scope &amp; <span class="text-gradient">ROI Calculator</span>
         </h1>
         <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 20px;">
-          Configure your enterprise technical requirements to instantly forecast delivery timelines, squad compositions, investment ranges, and cost savings vs. US domestic in-house hiring.
+          Configure your enterprise technical requirements to instantly forecast delivery timelines, squad compositions,
+          investment ranges, and cost savings vs. US domestic in-house hiring.
         </p>
       </div>
     </section>
@@ -121,17 +126,19 @@
     <section class="section calculator-section" id="calculator" style="padding-top: 10px; padding-bottom: 60px;">
       <div class="container">
         <div class="calculator-wrapper">
-          
+
           <!-- Inputs Panel -->
           <div class="calc-inputs-panel">
             <div class="calc-group">
               <label class="calc-label">1. Primary Engineering Scope</label>
               <div class="calc-options-grid">
-                <button class="calc-option-btn calc-service-btn selected" data-multiplier="1.2">Custom Software / SaaS</button>
+                <button class="calc-option-btn calc-service-btn selected" data-multiplier="1.2">Custom Software /
+                  SaaS</button>
                 <button class="calc-option-btn calc-service-btn" data-multiplier="1.4">SAP GRC &amp; Security</button>
                 <button class="calc-option-btn calc-service-btn" data-multiplier="1.1">Cloud / DevOps Migration</button>
                 <button class="calc-option-btn calc-service-btn" data-multiplier="1.3">Enterprise AI &amp; Data</button>
-                <button class="calc-option-btn calc-service-btn" data-multiplier="1.0">Technical SEO &amp; Growth</button>
+                <button class="calc-option-btn calc-service-btn" data-multiplier="1.0">Technical SEO &amp;
+                  Growth</button>
               </div>
             </div>
 
@@ -147,17 +154,21 @@
             <div class="calc-group">
               <label class="calc-label">3. Sprint Cadence &amp; Delivery Pace</label>
               <div class="calc-options-grid">
-                <button class="calc-option-btn calc-velocity-btn selected" data-velocity="1.0">Standard Agile Sprint (Bi-Weekly)</button>
-                <button class="calc-option-btn calc-velocity-btn" data-velocity="1.4">Accelerated 24/7 Dual-Track</button>
+                <button class="calc-option-btn calc-velocity-btn selected" data-velocity="1.0">Standard Agile Sprint
+                  (Bi-Weekly)</button>
+                <button class="calc-option-btn calc-velocity-btn" data-velocity="1.4">Accelerated 24/7
+                  Dual-Track</button>
               </div>
             </div>
 
             <div class="calc-group">
               <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                 <label class="calc-label" style="margin-bottom: 0;">4. Target Engagement Duration</label>
-                <span id="calcDurationVal" style="color: var(--accent-cyan); font-weight: 700; font-size: 0.88rem;">3 Months</span>
+                <span id="calcDurationVal" style="color: var(--accent-cyan); font-weight: 700; font-size: 0.88rem;">3
+                  Months</span>
               </div>
-              <input type="range" id="calcDurationSlider" class="calc-slider" min="1" max="12" value="3" aria-label="Target Engagement Duration in Months">
+              <input type="range" id="calcDurationSlider" class="calc-slider" min="1" max="12" value="3"
+                aria-label="Target Engagement Duration in Months">
             </div>
           </div>
 
@@ -166,7 +177,7 @@
             <div>
               <div class="badge-pill" style="margin-bottom: 8px;">Estimated Scope Forecast</div>
               <h3 style="font-size: 1.25rem; margin-bottom: 14px;">Real-Time Engineering Output</h3>
-              
+
               <div class="calc-metric-row">
                 <span class="calc-metric-title">Estimated Delivery:</span>
                 <span class="calc-metric-value" id="estTimeVal">12 Weeks (3 mo)</span>
@@ -189,12 +200,14 @@
 
               <div class="calc-metric-row">
                 <span class="calc-metric-title">Projected Annual ROI:</span>
-                <span class="calc-metric-value" id="estRoiVal" style="color: var(--accent-amber);">3.2x Estimated ROI</span>
+                <span class="calc-metric-value" id="estRoiVal" style="color: var(--accent-amber);">3.2x Estimated
+                  ROI</span>
               </div>
             </div>
 
             <div style="margin-top: 20px;">
-              <button class="btn btn-primary btn-sm open-discovery-modal" style="width: 100%; padding: 12px; font-size: 0.9rem;">
+              <button class="btn btn-primary btn-sm open-discovery-modal"
+                style="width: 100%; padding: 12px; font-size: 0.9rem;">
                 Lock In Scope &amp; Book Discovery Call
               </button>
               <div style="text-align: center; margin-top: 8px; font-size: 0.76rem; color: var(--text-muted);">
@@ -214,7 +227,8 @@
           <div class="badge-pill">Cost &amp; Velocity Economics</div>
           <h2 class="section-title">In-House Hiring vs. <span class="text-gradient">CASPRO Dedicated Squads</span></h2>
           <p class="section-subtitle">
-            See the true total cost of ownership (TCO) breakdown comparing traditional domestic hiring with CASPRO's managed engineering model.
+            See the true total cost of ownership (TCO) breakdown comparing traditional domestic hiring with CASPRO's
+            managed engineering model.
           </p>
         </div>
 
@@ -226,12 +240,14 @@
               <h3 style="font-size: 1.25rem; color: #ef4444;">Traditional US In-House Hiring</h3>
             </div>
             <p style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 16px;">
-              Direct employment carries heavy recruitment delays, inflated fixed overhead, and significant management burden.
+              Direct employment carries heavy recruitment delays, inflated fixed overhead, and significant management
+              burden.
             </p>
 
             <div class="compare-row">
               <span class="compare-label">Time to Onboard:</span>
-              <span class="compare-value" style="color: #ef4444; font-weight: 600;">60 - 90 Days (Interviews, Notices)</span>
+              <span class="compare-value" style="color: #ef4444; font-weight: 600;">60 - 90 Days (Interviews,
+                Notices)</span>
             </div>
             <div class="compare-row">
               <span class="compare-label">Recruiting Fees:</span>
@@ -275,15 +291,18 @@
             </div>
             <div class="compare-row">
               <span class="compare-label">Overhead &amp; Benefits:</span>
-              <span class="compare-value text-emerald" style="font-weight: 700;">$0 (Included in transparent monthly rate)</span>
+              <span class="compare-value text-emerald" style="font-weight: 700;">$0 (Included in transparent monthly
+                rate)</span>
             </div>
             <div class="compare-row">
               <span class="compare-label">Tooling &amp; Infrastructure:</span>
-              <span class="compare-value text-emerald" style="font-weight: 700;">Enterprise CI/CD &amp; tooling included</span>
+              <span class="compare-value text-emerald" style="font-weight: 700;">Enterprise CI/CD &amp; tooling
+                included</span>
             </div>
             <div class="compare-row">
               <span class="compare-label">Staffing Elasticity:</span>
-              <span class="compare-value text-emerald" style="font-weight: 700;">Elastic scale-up / scale-down (2-wk notice)</span>
+              <span class="compare-value text-emerald" style="font-weight: 700;">Elastic scale-up / scale-down (2-wk
+                notice)</span>
             </div>
             <div class="compare-row">
               <span class="compare-label">Senior Architect Oversight:</span>
@@ -299,7 +318,8 @@
       <div class="container">
         <div class="section-header">
           <div class="badge-pill">Commercial Models</div>
-          <h2 class="section-title">Transparent &amp; Predictable <span class="text-gradient">Engagement Models</span></h2>
+          <h2 class="section-title">Transparent &amp; Predictable <span class="text-gradient">Engagement Models</span>
+          </h2>
           <p class="section-subtitle">
             Choose the collaboration model that best matches your sprint cycle, risk profile, and budget governance.
           </p>
@@ -310,12 +330,19 @@
             <div class="badge-pill">Most Popular</div>
             <h3 style="margin-bottom: 8px; font-size: 1.2rem;">01. Dedicated Agile Squads</h3>
             <p style="font-size: 0.88rem; margin-bottom: 12px;">
-              Autonomous full-stack engineering teams (Developers, Architect, QA, DevOps) dedicated exclusively to your backlog and sprints.
+              Autonomous full-stack engineering teams (Developers, Architect, QA, DevOps) dedicated exclusively to your
+              backlog and sprints.
             </p>
             <ul class="service-features-list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Fixed monthly sprint billing</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct integration into your Jira / Slack</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Complete flexibility to re-prioritize</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Fixed monthly sprint billing</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Direct integration into your Jira / Slack</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Complete flexibility to re-prioritize</li>
             </ul>
           </div>
 
@@ -323,12 +350,19 @@
             <div class="badge-pill">Milestone Based</div>
             <h3 style="margin-bottom: 8px; font-size: 1.2rem;">02. Fixed-Scope Milestones</h3>
             <p style="font-size: 0.88rem; margin-bottom: 12px;">
-              Ideal for well-defined projects like SAP GRC audits, discrete cloud migrations, or MVP web/mobile platform builds.
+              Ideal for well-defined projects like SAP GRC audits, discrete cloud migrations, or MVP web/mobile platform
+              builds.
             </p>
             <ul class="service-features-list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Guaranteed deliverables &amp; deadlines</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pre-agreed total project budget</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Rigorous milestone sign-off process</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Guaranteed deliverables &amp; deadlines</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Pre-agreed total project budget</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Rigorous milestone sign-off process</li>
             </ul>
           </div>
 
@@ -336,12 +370,19 @@
             <div class="badge-pill">Strategic Advisory</div>
             <h3 style="margin-bottom: 8px; font-size: 1.2rem;">03. Fractional CTO &amp; Advisory</h3>
             <p style="font-size: 0.88rem; margin-bottom: 12px;">
-              Senior solution architects providing architectural audits, technical debt mitigation, and executive governance on a retained basis.
+              Senior solution architects providing architectural audits, technical debt mitigation, and executive
+              governance on a retained basis.
             </p>
             <ul class="service-features-list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Executive CIO / CTO guidance</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero-Trust &amp; enterprise audit readiness</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Vendor contract &amp; cloud bill audits</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Executive CIO / CTO guidance</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Zero-Trust &amp; enterprise audit readiness</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Vendor contract &amp; cloud bill audits</li>
             </ul>
           </div>
         </div>
@@ -358,32 +399,39 @@
 
         <div style="display: flex; flex-direction: column; gap: 10px;">
           <div class="glass-card faq-item" style="padding: 18px 22px; cursor: pointer;">
-            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.98rem;">
+            <div class="faq-question"
+              style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.98rem;">
               <span>How are the ~42% cost savings calculated?</span>
               <span style="color: var(--accent-cyan); font-size: 1.2rem;">+</span>
             </div>
             <div style="margin-top: 10px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
-              Savings are benchmarked against average US enterprise compensation packages ($145k-$185k base + 35% taxes, benefits, recruiting agency commissions, hardware, and dev licenses). CASPRO provides all-inclusive rates that eliminate fringe costs.
+              Savings are benchmarked against average US enterprise compensation packages ($145k-$185k base + 35% taxes,
+              benefits, recruiting agency commissions, hardware, and dev licenses). CASPRO provides all-inclusive rates
+              that eliminate fringe costs.
             </div>
           </div>
 
           <div class="glass-card faq-item" style="padding: 18px 22px; cursor: pointer;">
-            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.98rem;">
+            <div class="faq-question"
+              style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.98rem;">
               <span>Can I adjust team size during an ongoing engagement?</span>
               <span style="color: var(--accent-cyan); font-size: 1.2rem;">+</span>
             </div>
             <div style="margin-top: 10px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
-              Yes. With our Dedicated Agile Squad model, you can scale squad capacity up or down with a standard two-week sprint notice, ensuring you only pay for the exact engineering bandwidth you need.
+              Yes. With our Dedicated Agile Squad model, you can scale squad capacity up or down with a standard
+              two-week sprint notice, ensuring you only pay for the exact engineering bandwidth you need.
             </div>
           </div>
 
           <div class="glass-card faq-item" style="padding: 18px 22px; cursor: pointer;">
-            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.98rem;">
+            <div class="faq-question"
+              style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.98rem;">
               <span>Does CASPRO provide binding quotes before we start?</span>
               <span style="color: var(--accent-cyan); font-size: 1.2rem;">+</span>
             </div>
             <div style="margin-top: 10px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
-              Yes. Following our complimentary 30-minute discovery call and architecture audit, we deliver a formal Statement of Work (SOW) with clear milestone deliverables, sprint schedules, and locked-in pricing.
+              Yes. Following our complimentary 30-minute discovery call and architecture audit, we deliver a formal
+              Statement of Work (SOW) with clear milestone deliverables, sprint schedules, and locked-in pricing.
             </div>
           </div>
         </div>
@@ -398,7 +446,8 @@
             Ready to Formalize Your <span class="text-gradient">Project Scope</span>?
           </h2>
           <p style="max-width: 580px; margin: 0 auto 22px auto; color: var(--text-secondary); font-size: 0.95rem;">
-            Speak directly with a senior CASPRO solutions architect to review your technical specs and receive a detailed proposal within 24 hours.
+            Speak directly with a senior CASPRO solutions architect to review your technical specs and receive a
+            detailed proposal within 24 hours.
           </p>
           <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
             <button class="btn btn-primary btn-sm open-discovery-modal">Book 30-Min Discovery Session</button>
@@ -422,7 +471,8 @@
             </div>
           </a>
           <p>
-            Consulting and Services Pro LLC is a premier enterprise IT consulting and digital engineering firm delivering custom software, SAP GRC, cloud automation, and AI solutions worldwide.
+            Consulting and Services Pro LLC is a premier enterprise IT consulting and digital engineering firm
+            delivering custom software, SAP GRC, cloud automation, and AI solutions worldwide.
           </p>
           <div style="margin-top: 14px; display: flex; gap: 8px;">
             <span class="tech-tag" style="border: 1px solid var(--border-glass);">Zero-Trust Architecture</span>
@@ -455,7 +505,7 @@
 
         <div>
           <h4 class="footer-heading">Enterprise Support</h4>
-          <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">
+          <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
             📧 Inquiries: <a href="mailto:support@casprollc.com" style="color: var(--accent-cyan); text-decoration: none;">support@casprollc.com</a><br>
             📞 Phone: <a href="tel:3466453445" style="color: var(--text-primary); text-decoration: none;">(346) 645-3445</a><br>
             📍 Location: Houston, TX, USA<br>
@@ -484,7 +534,8 @@
       <div class="badge-pill" style="margin-bottom: 10px;">30-Minute Architecture Discovery</div>
       <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Schedule Your Enterprise Consultation</h3>
       <p style="font-size: 0.88rem; margin-bottom: 18px;">
-        Meet with a senior CASPRO solutions architect to discuss technical roadmaps, SAP GRC audits, cloud migration, or custom software specifications.
+        Meet with a senior CASPRO solutions architect to discuss technical roadmaps, SAP GRC audits, cloud migration, or
+        custom software specifications.
       </p>
 
       <form id="modalContactForm">
@@ -510,7 +561,8 @@
         </div>
         <div class="form-group">
           <label class="form-label">Brief Project Summary or Questions</label>
-          <textarea class="form-control" rows="3" placeholder="Tell us about your current challenges, timeline, or objectives..."></textarea>
+          <textarea class="form-control" rows="3"
+            placeholder="Tell us about your current challenges, timeline, or objectives..."></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-sm" style="width: 100%; padding: 11px;">
           Confirm Discovery Call Request
@@ -521,4 +573,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

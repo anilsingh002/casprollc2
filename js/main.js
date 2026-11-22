@@ -16,36 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* -------------------------------------------------------------------------- */
-/* Theme Management (Dark / Light)                                            */
+/* Theme Management (Dark Mode Enforced)                                      */
 /* -------------------------------------------------------------------------- */
 function initThemeToggle() {
-  const toggleBtn = document.getElementById('themeToggleBtn');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const savedTheme = localStorage.getItem('caspro-theme') || (prefersDark ? 'dark' : 'dark');
-
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(savedTheme);
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const nextTheme = current === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', nextTheme);
-      localStorage.setItem('caspro-theme', nextTheme);
-      updateThemeIcon(nextTheme);
-      showToast(`Switched to ${nextTheme.toUpperCase()} mode`, 'info');
-    });
-  }
-}
-
-function updateThemeIcon(theme) {
-  const icon = document.getElementById('themeIcon');
-  if (icon) {
-    if (theme === 'light') {
-      icon.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
-    } else {
-      icon.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
-    }
+  document.documentElement.setAttribute('data-theme', 'dark');
+  try {
+    localStorage.setItem('caspro-theme', 'dark');
+  } catch (e) {
+    /* storage catch */
   }
 }
 
@@ -284,12 +262,58 @@ function initContactForms() {
       submitBtn.innerText = 'Transmitting securely...';
       submitBtn.disabled = true;
 
+      // Extract values
+      const firstName = contactForm.querySelector('[name="firstName"], #contactFirstName, input[type="text"]')?.value || '';
+      const lastName = contactForm.querySelector('[name="lastName"], #contactLastName')?.value || '';
+      const email = contactForm.querySelector('[name="email"], #contactEmail, input[type="email"]')?.value || '';
+      const phone = contactForm.querySelector('[name="phone"], #contactPhone, input[type="tel"]')?.value || 'Not provided';
+      const company = contactForm.querySelector('[name="company"], #contactCompany')?.value || 'Not provided';
+      const service = contactForm.querySelector('[name="service"], #contactService, select')?.value || 'General Inquiry';
+      const message = contactForm.querySelector('[name="message"], #contactMessage, textarea')?.value || '';
+
+      const fullName = (firstName + ' ' + lastName).trim() || 'Prospective Client';
+      const mailSubject = encodeURIComponent(`CASPRO Consulting Inquiry: ${service} - ${company || fullName}`);
+      const mailBody = encodeURIComponent(
+        `New Inquiry from CASPRO Website:\n\n` +
+        `Client Name: ${fullName}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n` +
+        `Company: ${company}\n` +
+        `Practice: ${service}\n\n` +
+        `How We Can Help / Requirements:\n${message}\n\n` +
+        `Target SLA: Less than 24 hours`
+      );
+
+      // Background submission
+      fetch('https://formsubmit.co/ajax/support@casprollc.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Enterprise Inquiry: ${fullName} (${company})`,
+          name: fullName,
+          email: email,
+          phone: phone,
+          company: company,
+          service: service,
+          requirements: message
+        })
+      }).catch(() => {});
+
+      // Direct email trigger to support@casprollc.com
+      const mailtoUrl = `mailto:support@casprollc.com?subject=${mailSubject}&body=${mailBody}`;
+      setTimeout(() => {
+        window.location.href = mailtoUrl;
+      }, 300);
+
       setTimeout(() => {
         submitBtn.innerText = originalText;
         submitBtn.disabled = false;
         contactForm.reset();
-        showToast('Inquiry received! Our Solutions Architect will reach out in less than 24 hours.', 'success');
-      }, 1200);
+        showToast('Inquiry sent to support@casprollc.com! Our Solutions Architect will reach out in less than 24 hours.', 'success');
+      }, 1000);
     });
   }
 
@@ -297,17 +321,55 @@ function initContactForms() {
     modalForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = modalForm.querySelector('button[type="submit"]');
-      submitBtn.innerText = 'Scheduling...';
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = 'Transmitting securely...';
       submitBtn.disabled = true;
 
+      const name = modalForm.querySelector('[name="name"], #modalName, input[type="text"]')?.value || 'Prospective Client';
+      const email = modalForm.querySelector('[name="email"], #modalEmail, input[type="email"]')?.value || '';
+      const service = modalForm.querySelector('[name="service"], #modalService, select')?.value || 'Discovery Consultation';
+      const message = modalForm.querySelector('[name="message"], #modalMessage, textarea')?.value || '';
+
+      const mailSubject = encodeURIComponent(`CASPRO Discovery Call Request: ${service} - ${name}`);
+      const mailBody = encodeURIComponent(
+        `Discovery Call Booking Request:\n\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Area of Interest: ${service}\n` +
+        `Project Summary / Questions:\n${message}\n\n` +
+        `Target SLA: Less than 24 hours`
+      );
+
+      // Background submission
+      fetch('https://formsubmit.co/ajax/support@casprollc.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `Discovery Call Request: ${name} (${service})`,
+          name: name,
+          email: email,
+          area_of_interest: service,
+          project_summary: message
+        })
+      }).catch(() => {});
+
+      // Direct email trigger to support@casprollc.com
+      const mailtoUrl = `mailto:support@casprollc.com?subject=${mailSubject}&body=${mailBody}`;
       setTimeout(() => {
-        submitBtn.innerText = 'Booked!';
+        window.location.href = mailtoUrl;
+      }, 300);
+
+      setTimeout(() => {
+        submitBtn.innerText = originalText;
         submitBtn.disabled = false;
         modalForm.reset();
         const modal = document.getElementById('discoveryModal');
         if (modal) modal.classList.remove('active');
-        showToast('Discovery Session booked! Calendar invitation sent to your email.', 'success');
-      }, 1200);
+        showToast('Discovery Call Request sent to support@casprollc.com! We will confirm your calendar invitation shortly.', 'success');
+      }, 1000);
     });
   }
 
@@ -351,7 +413,7 @@ function showToast(message, type = 'info') {
 
   const toast = document.createElement('div');
   toast.className = 'toast';
-  
+
   let iconSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>`;
   if (type === 'success') {
     iconSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`;
